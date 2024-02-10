@@ -38,7 +38,7 @@ def print_data():
         print(''.join(data))
 
 def redone_data():
-    var = int(input(f'В какой базе вы бы хотели заменить данные?'
+    var = int(input(f'В какой базе вы бы хотели заменить данные?\n'
                     f'1 - Первая база\n'
                     f'2 - Вторая база\n\n'
                     f'Ваш выбор? '))
