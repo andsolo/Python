@@ -29,14 +29,12 @@ def print_operation_table(operation, num_rows=9, num_columns=9):
     if num_rows < 2 or num_columns < 2:
         print('ОШИБКА! Размерности таблицы должны быть больше 2!')
     else:
-        print(' '.join(list(map(str, range(1, num_columns + 1)))))
-        for i in range(2, num_rows + 1):
-            print(i, end = ' ')
-            for j in range(2, num_columns + 1):
-                print(operation(i, j), end=' ')
-            print()
+        for x in range(1, num_rows + 1):
+            for y in range(1, num_columns + 1):
+                if num_columns == y:
+                    print(operation(x, y))
+                else:
+                    print(operation(x, y), end=' ')
 
-# print_operation_table(lambda x, y: x * y) 
-
-print_operation_table(lambda x, y: x * y, 3, 2)
+print_operation_table(lambda x, y: x + y, 4, 4)
 '''
